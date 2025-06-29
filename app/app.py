@@ -105,7 +105,9 @@ def concat():
         return make_response(jsonify("bad request"),400)
 
 @app.route("/reduce")
-def reduce(op,lst):
+def reduce():
+    op=request.args.get('op',type=str)
+    lst=request.args.get('lst',type=list)
     if op == 'add':
         result = 0
         length=len(lst)
