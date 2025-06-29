@@ -107,7 +107,12 @@ def concat():
 @app.route("/reduce")
 def reduce(op,lst):
     if op == 'add':
-        result = sum(lst)
+        result = 0
+        length=len(lst)
+        if length == 0:
+            return make_response(jsonify("List is empty"), 400)
+        for i in range(length):
+          result += lst[i] 
     elif op == 'mul':
         result = 1
         for num in lst:
