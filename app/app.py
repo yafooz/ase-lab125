@@ -16,7 +16,7 @@ def add():
     else:
          return make_response (jsonify("invalide inputs .."),400)
     
-
+@app.route("/div")
 def div():
     a=request.args.get('a',type=float)
     b=request.args.get('b',type=float)
