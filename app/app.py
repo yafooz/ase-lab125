@@ -24,16 +24,8 @@ def div():
         if b!=0:
             return make_response(jsonify(s=a/b),200)
     else:
-        return make_response(jsonify("invalide inputs ..."),400)    
-@app.route("/div")
-def div():
-    a=request.args.get('a',type=float)
-    b=request.args.get('a',type=float)
-    if a and b :
-        return make_response(jsonify(s=a/b),200)
-    else:
-        return make_response(jsonify("inavlide inputs ..."),400)
-    
+        return make_response(jsonify("invalide inputs ..."),400)  
+      
 
 
 @app.route("/mod")
