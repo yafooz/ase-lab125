@@ -15,7 +15,16 @@ def add():
         return make_response(jsonify(s=a+b),200)
     else:
          return make_response (jsonify("invalide inputs .."),400)
+    
 
+def div():
+    a=request.args.get('a',type=float)
+    b=request.args.get('b',type=float)
+    if a and b:
+        if b!=0:
+            return make_response(jsonify(s=a/b),200)
+    else:
+        return make_response(jsonify("invalide inputs ..."),400)    
 # @app.route("/div")
 # def div():
 #     a=request.args.get('a',type=float)
