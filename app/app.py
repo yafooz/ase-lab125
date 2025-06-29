@@ -142,9 +142,7 @@ def reduce(op,lst):
     return make_response(jsonify(s=result), 200)
 
 
-@app.route("/crash")
-def crash():
-    try
+
         
 
 if __name__ == '__main__':
