@@ -89,4 +89,6 @@ def div():
 #      def factorial2():
         
 #          a=requests.post('a',)
-         
+if __name__ == '__main__':
+    app.run(debug=True)
+    
