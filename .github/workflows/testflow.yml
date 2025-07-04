@@ -1,0 +1,9 @@
+name : testflow 
+
+on: push 
+
+jobs:
+  testjob1:
+    name: lin1
+    runs-on: ubuntu-latest
+
